@@ -5,3 +5,12 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.utterances.enabled){ %>
+    <script src="https://utteranc.es/client.js"
+        repo="<%= theme.utterances.repo %>"
+        issue-term="<%= theme.utterances['issue-term'] || 'pathname' %>"
+        theme="<%= theme.utterances.theme || 'photon-dark' %>"
+        crossorigin="anonymous"
+        async>
+    </script>
+<% } %>
